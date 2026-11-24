@@ -1,0 +1,32 @@
+{
+  "_note": "Metric gauge block sets. Values are exact decimal strings in mm. Each block appears once per series (no duplicates in these sets). Sources checked 2026-11-24.",
+  "sets": [
+    {
+      "id": "87",
+      "count": 87,
+      "name": { "eu": "87 blokeko multzoa (1 mm-ko oinarria)", "es": "Juego de 87 bloques (base 1 mm)" },
+      "source": "Mitutoyo 516-535-56 (rectangular steel, 1 mm base, 87 pc), composition as listed by Penn Tool Co.; same composition as the MetroLab spec §3. Note: some vendors sell a different 87-piece set (e.g. 1.01-1.50 and 2-10 mm); MetroLab always shows the set used.",
+      "sourceUrl": "https://penntoolco.com/mitutoyo-1mm-base-block-set-rectangular-steel-87-pc-grade-k-series-516-516-535-56",
+      "series": [
+        { "from": "1.001", "to": "1.009", "step": "0.001" },
+        { "from": "1.01", "to": "1.49", "step": "0.01" },
+        { "from": "0.5", "to": "9.5", "step": "0.5" },
+        { "from": "10", "to": "100", "step": "10" }
+      ]
+    },
+    {
+      "id": "112",
+      "count": 112,
+      "name": { "eu": "112 blokeko multzoa", "es": "Juego de 112 bloques" },
+      "source": "Mitutoyo 516-437-26 (square steel, metric, 112 pc), composition as listed by Transcat.",
+      "sourceUrl": "https://www.transcat.com/516-437-26-223816",
+      "series": [
+        { "from": "1.0005", "to": "1.0005", "step": "0.0005" },
+        { "from": "1.001", "to": "1.009", "step": "0.001" },
+        { "from": "1.01", "to": "1.49", "step": "0.01" },
+        { "from": "0.5", "to": "24.5", "step": "0.5" },
+        { "from": "25", "to": "100", "step": "25" }
+      ]
+    }
+  ]
+}

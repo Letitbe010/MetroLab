@@ -1,0 +1,48 @@
+{
+  "_note": "Spec §11.2. Hand-computed; NEVER edit an expected value to make the implementation pass.",
+  "cases": [
+    {
+      "id": "MG1",
+      "title": "Sine bar + gauge stack",
+      "data": { "L": "100", "angleDeg": "15", "set": "87" },
+      "expected": { "h": "25.8819", "hMicron": "25.882", "stack": ["1.002", "1.38", "3.5", "20"], "minBlocks": 4 },
+      "phase": 2,
+      "stackPhase": 1
+    },
+    {
+      "id": "MG2",
+      "title": "Three wires, M10 x 1.5",
+      "data": { "P": "1.5", "flankAngleDeg": "60", "wireD": "0.866", "M": "10.325" },
+      "expected": { "bestWire": "0.866", "d2": "9.026" },
+      "phase": 2
+    },
+    {
+      "id": "MG3",
+      "title": "External taper over rollers",
+      "data": { "h1": "0", "M1": "40", "h2": "60", "M2": "46" },
+      "expected": { "C": "0.1", "halfAngleDeg": "2.8624", "angleDeg": "5.7248" },
+      "phase": 2
+    },
+    {
+      "id": "MG4",
+      "title": "Temperature correction",
+      "data": { "L": "200", "alphaPart": "0.0000115", "tPart": "25", "tTool": "20" },
+      "expected": { "dL": "0.0115" },
+      "phase": 2
+    },
+    {
+      "id": "MG5",
+      "title": "Vernier caliper",
+      "data": { "s": "1", "divisions": 50, "main": "23", "line": 17 },
+      "expected": { "appreciation": "0.02", "reading": "23.34" },
+      "phase": 1
+    },
+    {
+      "id": "MG6",
+      "title": "Micrometer",
+      "data": { "sleeve": "12.5", "thimble": 37 },
+      "expected": { "reading": "12.87" },
+      "phase": 1
+    }
+  ]
+}
