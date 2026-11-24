@@ -1,5 +1,5 @@
 {
-  "_note": "ISO 286 subset for limit gauges (MetroLab). Values in micrometres, nominal sizes up to 120 mm. Ranges are (above, up to]. Built for this project (DoikuntzaLab does not exist); checked against MU-Elhuyar 'Fabrikazio-perdoiak' tables 4 and 9 (1990-92, pp. 15-16 and 31). Known discrepancy: Elhuyar prints IT11 = 65 for 3-6 mm; ISO 286-1 gives 75 (used here). Hole deviations A..H follow the ISO rule EI = -es; JS/js = +-IT/2. Holes K..ZC (Delta rule) are NOT included.",
+  "_note": "ISO 286 subset for limit gauges (MetroLab). Values in micrometres, nominal sizes up to 120 mm. Ranges are (above, up to]. Built for this project (DoikuntzaLab does not exist); checked against MU-Elhuyar 'Fabrikazio-perdoiak' tables 4 and 9 (1990-92, pp. 15-16 and 31). Known discrepancy: Elhuyar prints IT11 = 65 for 3-6 mm; 75 is used, as in ISO 286-1 and in the EN 20286-1 table printed in the Euskadi OPE 2022 exam (p. 8). Hole deviations A..H follow the ISO rule EI = -es; JS/js = +-IT/2. Holes K..ZC (Delta rule) are NOT included.",
   "source": "ISO 286-1:2010 tables 1-3 / ISO 286-2; cross-checked with MU-Elhuyar 5325 'Fabrikazio-perdoiak' (Ariketa-materiala/02_Elhuyar-MU_euskaraz).",
   "ranges": [3, 6, 10, 18, 30, 50, 80, 120],
   "IT": {

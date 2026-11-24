@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { type Lang, LangContext, translate } from '../i18n';
 import { loadLang, saveLang } from './store';
+import { SchemaGallery } from './SchemaGallery';
 
-type Section = 'home' | 'teoria' | 'ebatziak' | 'praktika' | 'aurrerapena';
+type Section = 'home' | 'teoria' | 'ebatziak' | 'praktika' | 'aurrerapena' | 'eskemak';
 
 const NAV: { key: string; section: Exclude<Section, 'home'>; icon: string }[] = [
   { key: 'nav.theory', section: 'teoria', icon: 'T' },
@@ -16,6 +17,7 @@ const STEPS = ['theory', 'worked', 'practice', 'exam'] as const;
 
 function parseHash(): Section {
   const s = window.location.hash.replace(/^#\/?/, '').split('/')[0] ?? '';
+  if (s === 'eskemak') return 'eskemak'; // phase 3 review screen (not in the navigation)
   return (NAV.find((n) => n.section === s)?.section ?? 'home') as Section;
 }
 
@@ -84,7 +86,9 @@ export function App() {
             </div>
           </header>
           <main>
-            {section === 'home' ? (
+            {section === 'eskemak' ? (
+              <SchemaGallery lang={lang} />
+            ) : section === 'home' ? (
               <section className="card">
                 <h1>{t('home.title')}</h1>
                 <p className="lead">{t('home.lead')}</p>
