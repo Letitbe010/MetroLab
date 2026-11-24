@@ -32,7 +32,7 @@ function useSection(): Section {
 }
 
 const COMMIT = (import.meta.env.VITE_COMMIT as string | undefined)?.slice(0, 7) ?? 'dev';
-const VERSION = 'v0.2.0';
+const VERSION = 'v0.3.0';
 
 export function App() {
   const [lang, setLang] = useState<Lang>(loadLang);
