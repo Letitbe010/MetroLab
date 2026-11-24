@@ -1,0 +1,975 @@
+[
+ {
+  "id": "ope-euskadi-2020-2",
+  "origin": "ope",
+  "status": "review-needed",
+  "sourceNote": "Euskadi OPE 2020, 1508, exercise 2 (Metrology). Configuration read from the figure (p. 4, ES): external cone with the large end up, Ø10 rollers on 10 mm blocks (X = 73) and on 100 mm blocks (X' = 100).",
+  "sourceUrl": "https://www.euskadi.eus/contenidos/informacion/langile_d_ope_sec_fp_2020_azte/es_def/adjuntos/secundaria/Organizacion_y_proyectos_de_fabricacion_mecanica_cast.pdf",
+  "difficulty": 2,
+  "setup": {
+   "kind": "taperRollers",
+   "rollerD": "10",
+   "h1": "10",
+   "h2": "100",
+   "M1": "73",
+   "M2": "100"
+  },
+  "asks": [
+   {
+    "id": "C",
+    "kind": "taperC"
+   }
+  ],
+  "weights": {
+   "C": 1
+  },
+  "text": {
+   "eu": "Kono baten konikotasuna C kalkulatu behar da, ehunekotan. Neurketan 10 mm-ko bi galga-bloke, 100 mm-ko beste bi eta 10 mm-ko diametroko zilindro kalibratuak erabili dira, irudian bezala jarrita: beheko zilindroak 10 mm-ko blokeen gainean daude, eta goikoak 100 mm-ko blokeen gainean. Zilindroen gaineko neurriak X = 73 mm (behean) eta X′ = 100 mm (goian) dira.",
+   "es": "Hay que calcular la conicidad C de un cono, en tanto por ciento. En la medición se han empleado dos calas de 10 mm, otras dos de 100 mm y cilindros calibrados de 10 mm de diámetro, dispuestos como en la figura: los cilindros inferiores sobre las calas de 10 mm y los superiores sobre las de 100 mm. Las cotas sobre cilindros son X = 73 mm (abajo) y X′ = 100 mm (arriba)."
+  }
+ },
+ {
+  "id": "ope-euskadi-2022-b",
+  "origin": "ope",
+  "status": "review-needed",
+  "sourceNote": "Euskadi OPE 2022 (stabilisation), 1508, exercise 2 option B (scanned exam, p. 15). My reading of the figure: trapezoidal part on the plate, Ø10 rollers on the plate (74.3 over rollers) and on 20 mm blocks (88.9); angle a between base and flank inside the part.",
+  "difficulty": 3,
+  "setup": {
+   "kind": "taperRollers",
+   "rollerD": "10",
+   "h1": "0",
+   "h2": "20",
+   "M1": "74.3",
+   "M2": "88.9",
+   "plane": true
+  },
+  "asks": [
+   {
+    "id": "a",
+    "kind": "planeAngle"
+   }
+  ],
+  "weights": {
+   "a": 1
+  },
+  "text": {
+   "eu": "Irudiko trapezio-formako piezaren \"a\" angelua kalkulatu behar da (oinarriaren eta alboaren artekoa, piezaren barrualdean). Ø10 mm-ko arrabolak mahai-planoaren gainean daudela, arrabolen gaineko neurria 74,3 mm da; 20 mm-ko galga-blokeen gainean, 88,9 mm.",
+   "es": "Hay que calcular el ángulo \"a\" de la pieza trapecial de la figura (entre la base y el flanco, por el interior de la pieza). Con los rodillos de Ø10 mm sobre el mármol, la medida sobre rodillos es 74,3 mm; sobre calas de 20 mm, 88,9 mm."
+  }
+ },
+ {
+  "id": "ope-madrid-2025-4",
+  "origin": "ope",
+  "status": "review-needed",
+  "sourceNote": "Madrid OPE 2025, 590112, exercise 4 (0.75 points): splined shaft, two Ø3 rollers in opposite gaps, tangents at 70°, intersection of the tangents at 10.88 mm from the centre.",
+  "sourceUrl": "https://www.comunidad.madrid/docs/assets/2025/06/21/rh03_257_2025_exam_590112.pdf",
+  "difficulty": 3,
+  "setup": {
+   "kind": "spline",
+   "rollerD": "3",
+   "vAngleDeg": "70",
+   "apexRadius": "10.88"
+  },
+  "asks": [
+   {
+    "id": "M",
+    "kind": "measure"
+   }
+  ],
+  "weights": {
+   "M": 1
+  },
+  "text": {
+   "eu": "Hortz kopuru bikoitiko ardatz ildaskatu baten diametro primitiboa egiaztatzeko, bi arrabol jartzen dira diametralki aurkako hutsuneetan, hortzen profilarekin ukitzen. Datuak: arrabolen diametroa 3 mm; arrabolen ukipen-puntuetako ukitzaileek osatzen duten angelua 70°; ardatzaren zentrotik ukitzaileen ebakidura-puntura dagoen distantzia 10,88 mm. Zer neurri M irakurriko da mikrometroan?",
+   "es": "Para verificar el diámetro primitivo de un eje estriado de número par de dientes se colocan dos rodillos en huecos diametralmente opuestos, en contacto con el perfil de los dientes. Datos: diámetro de los rodillos 3 mm; ángulo que forman las tangentes en los puntos de contacto 70°; distancia del centro del eje al punto de intersección de las tangentes 10,88 mm. ¿Qué medida M se leerá en el micrómetro?"
+  }
+ },
+ {
+  "id": "ope-madrid-2023-2-6",
+  "origin": "ope",
+  "status": "review-needed",
+  "sourceNote": "Madrid OPE 2023 (reposición), 590112, exercise 2.6 (0.5 points), with the cone of exercise 2 (c = 15 %). Interpretation (to confirm): the sine bar is set at the half-angle α/2; the stack is the nearest one the given set can build; the selection error is the deviation over the 100 mm checked with the dial gauge, Lc·tan(α_stack − α/2).",
+  "sourceUrl": "https://www.comunidad.madrid/docs/assets/2023/06/26/rh03_257_2023_exam_r_590112.pdf",
+  "difficulty": 3,
+  "setup": {
+   "kind": "sineBar",
+   "L": "100",
+   "taperC": "0.15",
+   "set": "madrid2023",
+   "checkLength": "100"
+  },
+  "asks": [
+   {
+    "id": "h",
+    "kind": "sineHeight"
+   },
+   {
+    "id": "stack",
+    "kind": "gaugeStack",
+    "nearestFeasible": true
+   },
+   {
+    "id": "err",
+    "kind": "selectionError"
+   }
+  ],
+  "weights": {
+   "h": 1,
+   "stack": 1,
+   "err": 1
+  },
+  "text": {
+   "eu": "Konikotasuna c = % 15 duen kono bat sinu-erregela batekin egiaztatu behar da (euskarrien arteko luzera 100 mm). Erabilgarri dagoen galga-bloke multzoa: 1,005; 1,01–1,09; 1,10–1,90; 1–10; 20, 30 eta 60. Kalkulatu erregela jarri behar den altuera h (konoaren erdi-angeluan), osatu multzoarekin lor daitekeen pilarik hurbilena, eta kalkulatu blokeen hautaketak eragindako errorea, erloju konparadore batekin 100 mm-ko luzeran egiaztatzen bada.",
+   "es": "Hay que verificar un cono de conicidad c = 15 % con una regla de senos (longitud entre apoyos 100 mm). Juego de bloques disponible: 1,005; 1,01–1,09; 1,10–1,90; 1–10; 20, 30 y 60. Calcula la altura h a la que debe colocarse la regla (al semiángulo del cono), compón la pila más próxima que permite el juego y calcula el error debido a la selección de los bloques si la verificación se hace con un reloj comparador sobre una longitud de 100 mm."
+  }
+ },
+ {
+  "id": "ope-aragon-2024-b2-2",
+  "origin": "ope",
+  "status": "review-needed",
+  "sourceNote": "Aragón OPE 2024, 590112, exercise B.2, part 2 (thermal expansion of a 1500 mm steel bar, 20 → 100 °C, α = 12·10⁻⁶ K⁻¹).",
+  "difficulty": 1,
+  "setup": {
+   "kind": "temperature",
+   "given": "at20",
+   "L": "1500",
+   "material": "steel",
+   "alphaPart": "12e-6",
+   "tPart": "100"
+  },
+  "asks": [
+   {
+    "id": "dL",
+    "kind": "tempDelta"
+   },
+   {
+    "id": "LT",
+    "kind": "lengthAtT"
+   }
+  ],
+  "weights": {
+   "dL": 1,
+   "LT": 1
+  },
+  "text": {
+   "eu": "1500 mm-ko altzairuzko barra bat saiakuntza batean 20 °C-tik 100 °C-ra berotzen da. Altzairuaren dilatazio linealeko koefizientea α = 12·10⁻⁶ K⁻¹ da. Kalkulatu luzapena eta barrak 100 °C-tan izango duen luzera.",
+   "es": "Una barra de acero de 1500 mm se calienta en un ensayo de 20 °C a 100 °C. El coeficiente de dilatación lineal del acero es α = 12·10⁻⁶ K⁻¹. Calcula el alargamiento y la longitud que tendrá la barra a 100 °C."
+  }
+ },
+ {
+  "id": "adapted-andalucia-2023-4-2",
+  "origin": "adapted",
+  "status": "review-needed",
+  "sourceNote": "After Andalucía OPE 2023, 590112, problem 4.2 (gauge for a 23f6 shaft), as summarised in the MetroLab spec §0.1; the original statement is not in the local folder.",
+  "difficulty": 2,
+  "setup": {
+   "kind": "fixedGauge",
+   "feature": "shaft",
+   "designation": "23f6"
+  },
+  "asks": [
+   {
+    "id": "go",
+    "kind": "gaugeGo"
+   },
+   {
+    "id": "nogo",
+    "kind": "gaugeNoGo"
+   }
+  ],
+  "weights": {
+   "go": 1,
+   "nogo": 1
+  },
+  "text": {
+   "eu": "Ø23f6 ardatz bat ahoko-kalibre (galgatxo) batekin egiaztatu behar da. ISO 286 tauletatik abiatuta, kalkulatu kalibrearen \"pasa\" (P) eta \"ez pasa\" (NP) aldeen neurriak.",
+   "es": "Hay que verificar un eje Ø23f6 con un calibre de herradura. A partir de las tablas ISO 286, calcula las medidas de los lados \"pasa\" (P) y \"no pasa\" (NP) del calibre."
+  }
+ },
+ {
+  "id": "spec-mg1",
+  "origin": "adapted",
+  "status": "review-needed",
+  "sourceNote": "Golden case MG1 of the spec (§11.2).",
+  "difficulty": 1,
+  "setup": {
+   "kind": "sineBar",
+   "L": "100",
+   "angleDeg": "15",
+   "set": "87"
+  },
+  "asks": [
+   {
+    "id": "h",
+    "kind": "sineHeight"
+   },
+   {
+    "id": "stack",
+    "kind": "gaugeStack",
+    "minimal": true
+   }
+  ],
+  "weights": {
+   "h": 1,
+   "stack": 1
+  },
+  "text": {
+   "eu": "100 mm-ko sinu-erregela bat 15°-ko angelua egiaztatzeko jarri behar da. Kalkulatu pilaren altuera h (µm-ra) eta osatu pila 87 blokeko multzoarekin (1,001–1,009; 1,01–1,49; 0,5–9,5; 10–100), bloke gutxienekin.",
+   "es": "Hay que montar una regla de senos de 100 mm para un ángulo de 15°. Calcula la altura h de la pila (a la micra) y compón la pila con el juego de 87 bloques (1,001–1,009; 1,01–1,49; 0,5–9,5; 10–100), con el mínimo de bloques."
+  }
+ },
+ {
+  "id": "spec-mg2",
+  "origin": "adapted",
+  "status": "review-needed",
+  "sourceNote": "Golden case MG2 of the spec (§11.2).",
+  "difficulty": 2,
+  "setup": {
+   "kind": "threeWire",
+   "thread": "M10",
+   "P": "1.5",
+   "flankAngleDeg": "60",
+   "wireD": "0.866",
+   "M": "10.325"
+  },
+  "asks": [
+   {
+    "id": "dw",
+    "kind": "bestWire"
+   },
+   {
+    "id": "d2",
+    "kind": "pitchDiameter"
+   }
+  ],
+  "weights": {
+   "dw": 1,
+   "d2": 1
+  },
+  "text": {
+   "eu": "M10 × 1,5 hari metriko baten diametro eraginkorra hiru harien metodoarekin egiaztatzen da. Kalkulatu hari optimoaren diametroa. Ø0,866 mm-ko hariekin, harien gaineko neurria M = 10,325 mm da: kalkulatu d₂.",
+   "es": "El diámetro medio de una rosca métrica M10 × 1,5 se verifica por el método de los tres alambres. Calcula el diámetro del alambre óptimo. Con alambres de Ø0,866 mm la medida sobre alambres es M = 10,325 mm: calcula d₂."
+  }
+ },
+ {
+  "id": "spec-mg3",
+  "origin": "adapted",
+  "status": "review-needed",
+  "sourceNote": "Golden case MG3 of the spec (§11.2); roller diameter (not given in the spec) set to 10 mm for the drawing — it does not change C or the angles.",
+  "difficulty": 2,
+  "setup": {
+   "kind": "taperRollers",
+   "rollerD": "10",
+   "h1": "0",
+   "h2": "60",
+   "M1": "40",
+   "M2": "46"
+  },
+  "asks": [
+   {
+    "id": "C",
+    "kind": "taperC"
+   },
+   {
+    "id": "half",
+    "kind": "halfAngle"
+   },
+   {
+    "id": "full",
+    "kind": "fullAngle"
+   }
+  ],
+  "weights": {
+   "C": 1,
+   "half": 1,
+   "full": 1
+  },
+  "text": {
+   "eu": "Kanpoko kono bat Ø10 mm-ko bi arrabol berdinekin neurtzen da. Arrabolak mahai-planoaren gainean daudela, M₁ = 40,000 mm; 60 mm-ko galga-blokeen gainean, M₂ = 46,000 mm. Kalkulatu konikotasuna C, erdi-angelua α/2 eta angelu osoa α.",
+   "es": "Un cono exterior se mide con dos rodillos iguales de Ø10 mm. Con los rodillos sobre el mármol, M₁ = 40,000 mm; sobre bloques de 60 mm, M₂ = 46,000 mm. Calcula la conicidad C, el semiángulo α/2 y el ángulo α."
+  }
+ },
+ {
+  "id": "spec-mg4",
+  "origin": "adapted",
+  "status": "review-needed",
+  "sourceNote": "Golden case MG4 of the spec (§11.2).",
+  "difficulty": 1,
+  "setup": {
+   "kind": "temperature",
+   "given": "measured",
+   "L": "200",
+   "material": "steel",
+   "alphaPart": "11.5e-6",
+   "tPart": "25"
+  },
+  "asks": [
+   {
+    "id": "dL",
+    "kind": "tempDelta"
+   }
+  ],
+  "weights": {
+   "dL": 1
+  },
+  "text": {
+   "eu": "Altzairuzko pieza bat (α = 11,5·10⁻⁶ K⁻¹) 25 °C-tan neurtu da eta irakurketa 200 mm izan da; tresna 20 °C-tan dago. Zeinu-konbentzioa: ΔL = L_neurtua − L₂₀. Kalkulatu ΔL.",
+   "es": "Una pieza de acero (α = 11,5·10⁻⁶ K⁻¹) se ha medido a 25 °C y la lectura ha sido 200 mm; el instrumento está a 20 °C. Convenio de signos: ΔL = L_medida − L₂₀. Calcula ΔL."
+  }
+ },
+ {
+  "id": "spec-mg5",
+  "origin": "adapted",
+  "status": "review-needed",
+  "sourceNote": "Golden case MG5 of the spec (§11.2).",
+  "difficulty": 1,
+  "setup": {
+   "kind": "vernier",
+   "s": "1",
+   "n": 50,
+   "modulus": 1,
+   "value": "23.34"
+  },
+  "asks": [
+   {
+    "id": "appr",
+    "kind": "appreciation"
+   },
+   {
+    "id": "reading",
+    "kind": "reading"
+   }
+  ],
+  "weights": {
+   "appr": 1,
+   "reading": 1
+  },
+  "text": {
+   "eu": "Irudiko kalibre noniodunak 50 zatiketako nonioa du (eskala nagusia milimetrotan). Kalkulatu apreziazioa eta idatzi irakurketa.",
+   "es": "El calibre de la figura tiene un nonio de 50 divisiones (escala principal en milímetros). Calcula la apreciación y escribe la lectura."
+  }
+ },
+ {
+  "id": "spec-mg6",
+  "origin": "adapted",
+  "status": "review-needed",
+  "sourceNote": "Golden case MG6 of the spec (§11.2).",
+  "difficulty": 1,
+  "setup": {
+   "kind": "micrometer",
+   "vernierDivs": 0,
+   "value": "12.87"
+  },
+  "asks": [
+   {
+    "id": "reading",
+    "kind": "reading"
+   }
+  ],
+  "weights": {
+   "reading": 1
+  },
+  "text": {
+   "eu": "Irudiko mikrometroak 0,5 mm-ko pausoa eta 50 zatiketako danborra ditu. Idatzi irakurketa.",
+   "es": "El micrómetro de la figura tiene paso de 0,5 mm y tambor de 50 divisiones. Escribe la lectura."
+  }
+ },
+ {
+  "id": "vernier-1-1",
+  "origin": "generated",
+  "template": "vernier",
+  "seed": 1,
+  "difficulty": 1,
+  "setup": {
+   "kind": "vernier",
+   "s": "1",
+   "n": 20,
+   "modulus": 2,
+   "value": "81.50"
+  },
+  "asks": [
+   {
+    "id": "reading",
+    "kind": "reading"
+   }
+  ],
+  "weights": {
+   "reading": 1
+  },
+  "text": {
+   "eu": "Irudiko kalibre noniodunak 20 zatiketako nonioa du (eskala nagusia milimetrotan), nonio luzatua. Idatzi irakurketa, milimetrotan.",
+   "es": "El calibre de la figura tiene un nonio de 20 divisiones (escala principal en milímetros), nonio alargado. Escribe la lectura, en milímetros."
+  },
+  "status": "review-needed"
+ },
+ {
+  "id": "micrometer-1-1",
+  "origin": "generated",
+  "template": "micrometer",
+  "seed": 1,
+  "difficulty": 1,
+  "setup": {
+   "kind": "micrometer",
+   "vernierDivs": 0,
+   "value": "16.05"
+  },
+  "asks": [
+   {
+    "id": "reading",
+    "kind": "reading"
+   }
+  ],
+  "weights": {
+   "reading": 1
+  },
+  "text": {
+   "eu": "Irudiko mikrometroak 0,5 mm-ko pausoa eta 50 zatiketako danborra ditu. Idatzi irakurketa, milimetrotan.",
+   "es": "El micrómetro de la figura tiene paso de 0,5 mm y tambor de 50 divisiones. Escribe la lectura, en milímetros."
+  },
+  "status": "review-needed"
+ },
+ {
+  "id": "micrometer-2-1",
+  "origin": "generated",
+  "template": "micrometer",
+  "seed": 1,
+  "difficulty": 2,
+  "setup": {
+   "kind": "micrometer",
+   "vernierDivs": 10,
+   "value": "16.050"
+  },
+  "asks": [
+   {
+    "id": "reading",
+    "kind": "reading"
+   }
+  ],
+  "weights": {
+   "reading": 1
+  },
+  "text": {
+   "eu": "Irudiko mikrometroak 0,5 mm-ko pausoa eta 50 zatiketako danborra ditu, eta 0,001 mm-ko nonioa zorroan. Idatzi irakurketa, milimetrotan.",
+   "es": "El micrómetro de la figura tiene paso de 0,5 mm y tambor de 50 divisiones, y nonio de 0,001 mm en el casquillo. Escribe la lectura, en milímetros."
+  },
+  "status": "review-needed"
+ },
+ {
+  "id": "gaugeStack-1-1",
+  "origin": "generated",
+  "template": "gaugeStack",
+  "seed": 1,
+  "difficulty": 1,
+  "setup": {
+   "kind": "gaugeStack",
+   "target": "13.261",
+   "set": "87"
+  },
+  "asks": [
+   {
+    "id": "stack",
+    "kind": "gaugeStack",
+    "minimal": false
+   }
+  ],
+  "weights": {
+   "stack": 1
+  },
+  "text": {
+   "eu": "13,261 mm-ko neurria osatu behar da galga-blokeekin. Erabilgarri dagoena: 87 blokeko multzoa (1,001–1,009; 1,01–1,49; 0,5–9,5; 10–100). Osatu pila.",
+   "es": "Hay que componer la medida 13,261 mm con bloques patrón. Disponible: juego de 87 bloques (1,001–1,009; 1,01–1,49; 0,5–9,5; 10–100). Compón la pila."
+  },
+  "status": "review-needed"
+ },
+ {
+  "id": "gaugeStack-2-1",
+  "origin": "generated",
+  "template": "gaugeStack",
+  "seed": 1,
+  "difficulty": 2,
+  "setup": {
+   "kind": "gaugeStack",
+   "target": "11.9950",
+   "set": "112"
+  },
+  "asks": [
+   {
+    "id": "stack",
+    "kind": "gaugeStack",
+    "minimal": true
+   }
+  ],
+  "weights": {
+   "stack": 1
+  },
+  "text": {
+   "eu": "11,995 mm-ko neurria osatu behar da galga-blokeekin. Erabilgarri dagoena: 112 blokeko multzoa (1,0005; 1,001–1,009; 1,01–1,49; 0,5–24,5; 25–100). Osatu pila, ahalik eta bloke gutxienekin.",
+   "es": "Hay que componer la medida 11,995 mm con bloques patrón. Disponible: juego de 112 bloques (1,0005; 1,001–1,009; 1,01–1,49; 0,5–24,5; 25–100). Compón la pila con el menor número posible de bloques."
+  },
+  "status": "review-needed"
+ },
+ {
+  "id": "sineBar-1-1",
+  "origin": "generated",
+  "template": "sineBar",
+  "seed": 1,
+  "difficulty": 1,
+  "setup": {
+   "kind": "sineBar",
+   "L": "200",
+   "angleDeg": "5",
+   "set": "87"
+  },
+  "asks": [
+   {
+    "id": "h",
+    "kind": "sineHeight"
+   },
+   {
+    "id": "stack",
+    "kind": "gaugeStack"
+   }
+  ],
+  "weights": {
+   "h": 1,
+   "stack": 1
+  },
+  "text": {
+   "eu": "200 mm-ko sinu-erregela bat 5°-ko angelua egiaztatzeko jarri behar da. Kalkulatu galga-blokeen pilaren altuera h (µm-ra) eta osatu pila 87 blokeko multzoa (1,001–1,009; 1,01–1,49; 0,5–9,5; 10–100) erabiliz.",
+   "es": "Hay que montar una regla de senos de 200 mm para verificar un ángulo de 5°. Calcula la altura h de la pila de bloques patrón (a la micra) y compón la pila con el juego de 87 bloques (1,001–1,009; 1,01–1,49; 0,5–9,5; 10–100)."
+  },
+  "status": "review-needed"
+ },
+ {
+  "id": "sineBar-2-1",
+  "origin": "generated",
+  "template": "sineBar",
+  "seed": 1,
+  "difficulty": 2,
+  "setup": {
+   "kind": "sineBar",
+   "L": "200",
+   "taperC": "1000/20047",
+   "set": "87"
+  },
+  "asks": [
+   {
+    "id": "h",
+    "kind": "sineHeight"
+   },
+   {
+    "id": "stack",
+    "kind": "gaugeStack",
+    "minimal": true
+   }
+  ],
+  "weights": {
+   "h": 1,
+   "stack": 1
+  },
+  "text": {
+   "eu": "Morse 1 konoaren (C = 1:20,047) sortzailea egiaztatzeko, konoa 200 mm-ko sinu-erregela baten gainean jartzen da, erdi-angeluan (α/2) inklinatuta. Kalkulatu pilaren altuera h (µm-ra) eta osatu pila 87 blokeko multzoa (1,001–1,009; 1,01–1,49; 0,5–9,5; 10–100) erabiliz, bloke gutxienekin.",
+   "es": "Para verificar la generatriz del cono Morse 1 (C = 1:20,047), el cono se coloca sobre una regla de senos de 200 mm inclinada su semiángulo (α/2). Calcula la altura h de la pila (a la micra) y compón la pila con el juego de 87 bloques (1,001–1,009; 1,01–1,49; 0,5–9,5; 10–100), con el mínimo de bloques."
+  },
+  "status": "review-needed"
+ },
+ {
+  "id": "taperRollers-2-1",
+  "origin": "generated",
+  "template": "taperRollers",
+  "seed": 1,
+  "difficulty": 2,
+  "setup": {
+   "kind": "taperRollers",
+   "rollerD": "8",
+   "h1": "20",
+   "h2": "120",
+   "M1": "48.401",
+   "M2": "53.396"
+  },
+  "asks": [
+   {
+    "id": "C",
+    "kind": "taperC"
+   },
+   {
+    "id": "half",
+    "kind": "halfAngle"
+   }
+  ],
+  "weights": {
+   "C": 1,
+   "half": 1
+  },
+  "text": {
+   "eu": "Mahai-planoaren gainean dagoen kanpoko kono bat Ø8 mm-ko bi arrabolekin neurtzen da. Arrabolak 20 mm-ko galga-blokeen gainean daudela, arrabolen gaineko neurria M₁ = 48,401 mm da; 120 mm-ko galga-blokeen gainean, M₂ = 53,396 mm. Kalkulatu konikotasuna C eta erdi-angelua α/2.",
+   "es": "Un cono exterior apoyado en el mármol se mide con dos rodillos de Ø8 mm. Con los rodillos sobre bloques patrón de 20 mm, la medida sobre rodillos es M₁ = 48,401 mm; sobre bloques patrón de 120 mm, M₂ = 53,396 mm. Calcula la conicidad C y el semiángulo α/2."
+  },
+  "status": "review-needed"
+ },
+ {
+  "id": "taperRollers-3-1",
+  "origin": "generated",
+  "template": "taperRollers",
+  "seed": 1,
+  "difficulty": 3,
+  "setup": {
+   "kind": "taperRollers",
+   "rollerD": "8",
+   "h1": "20",
+   "h2": "120",
+   "M1": "48.401",
+   "M2": "53.396",
+   "coneLength": "148"
+  },
+  "asks": [
+   {
+    "id": "C",
+    "kind": "taperC"
+   },
+   {
+    "id": "half",
+    "kind": "halfAngle"
+   },
+   {
+    "id": "D0",
+    "kind": "diameter",
+    "at": "plate"
+   },
+   {
+    "id": "D1",
+    "kind": "diameter",
+    "at": "top"
+   }
+  ],
+  "weights": {
+   "C": 1,
+   "half": 1,
+   "D0": 1,
+   "D1": 1
+  },
+  "text": {
+   "eu": "Mahai-planoaren gainean dagoen kanpoko kono bat Ø8 mm-ko bi arrabolekin neurtzen da. Arrabolak 20 mm-ko galga-blokeen gainean daudela, arrabolen gaineko neurria M₁ = 48,401 mm da; 120 mm-ko galga-blokeen gainean, M₂ = 53,396 mm. Kalkulatu konikotasuna C eta erdi-angelua α/2. Konoaren altuera 148 mm da: kalkulatu mahai-planoko diametroa eta goiko muturreko diametroa.",
+   "es": "Un cono exterior apoyado en el mármol se mide con dos rodillos de Ø8 mm. Con los rodillos sobre bloques patrón de 20 mm, la medida sobre rodillos es M₁ = 48,401 mm; sobre bloques patrón de 120 mm, M₂ = 53,396 mm. Calcula la conicidad C y el semiángulo α/2. La altura del cono es 148 mm: calcula el diámetro en el mármol y el diámetro del extremo superior."
+  },
+  "status": "review-needed"
+ },
+ {
+  "id": "trapezoid-3-1",
+  "origin": "generated",
+  "template": "trapezoid",
+  "seed": 1,
+  "difficulty": 3,
+  "setup": {
+   "kind": "taperRollers",
+   "rollerD": "10",
+   "h1": "0",
+   "h2": "25",
+   "M1": "87.504",
+   "M2": "94.531",
+   "plane": true
+  },
+  "asks": [
+   {
+    "id": "a",
+    "kind": "planeAngle"
+   }
+  ],
+  "weights": {
+   "a": 1
+  },
+  "text": {
+   "eu": "Trapezio-formako pieza baten alboen angelua egiaztatzeko, Ø10 mm-ko arrabolak erabiltzen dira: mahai-planoaren gainean, arrabolen gaineko neurria 87,504 mm da; 25 mm-ko galga-blokeen gainean, 94,531 mm. Kalkulatu oinarriaren eta alboaren arteko angelua a (piezaren barrualdean).",
+   "es": "Para verificar el ángulo de los flancos de una pieza trapecial se usan rodillos de Ø10 mm: sobre el mármol, la medida sobre rodillos es 87,504 mm; sobre bloques patrón de 25 mm, 94,531 mm. Calcula el ángulo a entre la base y el flanco (por el interior de la pieza)."
+  },
+  "status": "review-needed"
+ },
+ {
+  "id": "taperBalls-3-1",
+  "origin": "generated",
+  "template": "taperBalls",
+  "seed": 1,
+  "difficulty": 3,
+  "setup": {
+   "kind": "taperBalls",
+   "d1": "10",
+   "d2": "20",
+   "depth1": "51.275",
+   "depth2": "17.482"
+  },
+  "asks": [
+   {
+    "id": "half",
+    "kind": "halfAngle"
+   },
+   {
+    "id": "D",
+    "kind": "diameter",
+    "at": "top"
+   }
+  ],
+  "weights": {
+   "half": 1,
+   "D": 1
+  },
+  "text": {
+   "eu": "Barneko kono bat bi bolarekin egiaztatzen da. Ø10 mm-ko bola sartuta, haren goiko puntua goiko aurpegitik 51,275 mm-ra dago (behera); Ø20 mm-ko bolarekin, 17,482 mm-ra. Kalkulatu erdi-angelua α/2 eta goiko aurpegiko diametroa D.",
+   "es": "Un cono interior se verifica con dos bolas. Con la bola de Ø10 mm, su punto superior queda a 51,275 mm por debajo de la cara superior; con la de Ø20 mm, a 17,482 mm. Calcula el semiángulo α/2 y el diámetro D en la cara superior."
+  },
+  "status": "review-needed"
+ },
+ {
+  "id": "threeWire-2-1",
+  "origin": "generated",
+  "template": "threeWire",
+  "seed": 1,
+  "difficulty": 2,
+  "setup": {
+   "kind": "threeWire",
+   "thread": "M16",
+   "P": "2",
+   "flankAngleDeg": "60",
+   "wireD": "1.155",
+   "M": "16.410"
+  },
+  "asks": [
+   {
+    "id": "d2",
+    "kind": "pitchDiameter"
+   }
+  ],
+  "weights": {
+   "d2": 1
+  },
+  "text": {
+   "eu": "M16 × 2 hari metriko baten (α = 60°) diametro eraginkorra hiru harien metodoarekin egiaztatzen da, Ø1,155 mm-ko hariekin. Harien gaineko neurria M = 16,41 mm da. Kalkulatu diametro eraginkorra d₂.",
+   "es": "El diámetro medio de una rosca métrica M16 × 2 (α = 60°) se verifica por el método de los tres alambres, con alambres de Ø1,155 mm. La medida sobre alambres es M = 16,41 mm. Calcula el diámetro medio d₂."
+  },
+  "status": "review-needed"
+ },
+ {
+  "id": "spline-3-1",
+  "origin": "generated",
+  "template": "spline",
+  "seed": 1,
+  "difficulty": 3,
+  "setup": {
+   "kind": "spline",
+   "rollerD": "3.5",
+   "vAngleDeg": "60",
+   "apexRadius": "19.60"
+  },
+  "asks": [
+   {
+    "id": "M",
+    "kind": "measure"
+   }
+  ],
+  "weights": {
+   "M": 1
+  },
+  "text": {
+   "eu": "Hortz kopuru bikoitiko ardatz ildaskatu bat egiaztatzeko, Ø3,5 mm-ko bi arrabol jartzen dira diametralki aurkako hutsuneetan. Ukipen-puntuetako ukitzaileek 60°-ko angelua osatzen dute, eta ardatzaren zentrotik ukitzaileen ebakidura-puntura 19,6 mm daude. Zer neurri M irakurriko da mikrometroan?",
+   "es": "Para verificar un eje estriado de número par de dientes se colocan dos rodillos de Ø3,5 mm en huecos diametralmente opuestos. Las tangentes en los puntos de contacto forman 60°, y la distancia del centro del eje al punto de intersección de las tangentes es 19,6 mm. ¿Qué medida M se leerá en el micrómetro?"
+  },
+  "status": "review-needed"
+ },
+ {
+  "id": "dovetail-3-1",
+  "origin": "generated",
+  "template": "dovetail",
+  "seed": 1,
+  "difficulty": 3,
+  "setup": {
+   "kind": "dovetail",
+   "dovetail": "female",
+   "rollerD": "10",
+   "alphaDeg": "45",
+   "X": "103.858"
+  },
+  "asks": [
+   {
+    "id": "w",
+    "kind": "width"
+   }
+  ],
+  "weights": {
+   "w": 1
+  },
+  "text": {
+   "eu": "buztan-enara emea bat (45°) Ø10 mm-ko bi arrabolekin neurtu da: arrabolen arteko neurria X = 103,858 mm. Kalkulatu oinarri zabala B.",
+   "es": "Una cola de milano hembra (45°) se ha medido con dos rodillos de Ø10 mm: la medida entre rodillos es X = 103,858 mm. Calcula la base ancha B."
+  },
+  "status": "review-needed"
+ },
+ {
+  "id": "temperature-1-1",
+  "origin": "generated",
+  "template": "temperature",
+  "seed": 1,
+  "difficulty": 1,
+  "setup": {
+   "kind": "temperature",
+   "given": "at20",
+   "L": "1100",
+   "material": "brass",
+   "alphaPart": "19e-6",
+   "tPart": "150"
+  },
+  "asks": [
+   {
+    "id": "dL",
+    "kind": "tempDelta"
+   },
+   {
+    "id": "LT",
+    "kind": "lengthAtT"
+   }
+  ],
+  "weights": {
+   "dL": 1,
+   "LT": 1
+  },
+  "text": {
+   "eu": "1100 mm-ko letoizko barra bat (α = 19·10⁻⁶ K⁻¹) 20 °C-tik 150 °C-ra berotzen da. Kalkulatu luzapena ΔL eta 150 °C-ko luzera.",
+   "es": "Una barra de latón de 1100 mm (α = 19·10⁻⁶ K⁻¹) se calienta de 20 °C a 150 °C. Calcula el alargamiento ΔL y la longitud a 150 °C."
+  },
+  "status": "review-needed"
+ },
+ {
+  "id": "temperature-2-1",
+  "origin": "generated",
+  "template": "temperature",
+  "seed": 1,
+  "difficulty": 2,
+  "setup": {
+   "kind": "temperature",
+   "given": "measured",
+   "L": "51.231",
+   "material": "brass",
+   "alphaPart": "19e-6",
+   "tPart": "26",
+   "alphaTool": "11.5e-6",
+   "tTool": "26"
+  },
+  "asks": [
+   {
+    "id": "dL",
+    "kind": "tempDelta"
+   },
+   {
+    "id": "L20",
+    "kind": "length20"
+   }
+  ],
+  "weights": {
+   "dL": 1,
+   "L20": 1
+  },
+  "text": {
+   "eu": "Letoizko pieza bat (α = 19·10⁻⁶ K⁻¹) 26 °C-tan neurtu da, eta irakurketa L = 51,231 mm izan da; tresna altzairuzkoa da (α = 11,5·10⁻⁶ K⁻¹) eta 26 °C-tan dago. Zeinu-konbentzioa: ΔL = L_neurtua − L₂₀. Kalkulatu ΔL eta piezaren luzera 20 °C-tan.",
+   "es": "Una pieza de latón (α = 19·10⁻⁶ K⁻¹) se ha medido a 26 °C y la lectura ha sido L = 51,231 mm; el instrumento es de acero (α = 11,5·10⁻⁶ K⁻¹) y está a 26 °C. Convenio de signos: ΔL = L_medida − L₂₀. Calcula ΔL y la longitud de la pieza a 20 °C."
+  },
+  "status": "review-needed"
+ },
+ {
+  "id": "fixedGauge-1-1",
+  "origin": "generated",
+  "template": "fixedGauge",
+  "seed": 1,
+  "difficulty": 1,
+  "setup": {
+   "kind": "fixedGauge",
+   "feature": "shaft",
+   "nominal": "10",
+   "max": "10.022",
+   "min": "9.968"
+  },
+  "asks": [
+   {
+    "id": "go",
+    "kind": "gaugeGo"
+   },
+   {
+    "id": "nogo",
+    "kind": "gaugeNoGo"
+   }
+  ],
+  "weights": {
+   "go": 1,
+   "nogo": 1
+  },
+  "text": {
+   "eu": "Ardatz baten neurri onargarriak 9,968 mm eta 10,022 mm dira. Kalkulatu ahoko-kalibrearen \"pasa\" eta \"ez pasa\" aldeen neurriak (Taylor printzipioa).",
+   "es": "Las medidas admisibles de un eje son 9,968 mm y 10,022 mm. Calcula las medidas de los lados \"pasa\" y \"no pasa\" del calibre de herradura (principio de Taylor)."
+  },
+  "status": "review-needed"
+ },
+ {
+  "id": "fixedGauge-2-1",
+  "origin": "generated",
+  "template": "fixedGauge",
+  "seed": 1,
+  "difficulty": 2,
+  "setup": {
+   "kind": "fixedGauge",
+   "feature": "hole",
+   "designation": "18G7"
+  },
+  "asks": [
+   {
+    "id": "go",
+    "kind": "gaugeGo"
+   },
+   {
+    "id": "nogo",
+    "kind": "gaugeNoGo"
+   }
+  ],
+  "weights": {
+   "go": 1,
+   "nogo": 1
+  },
+  "text": {
+   "eu": "Ø18G7 zuloa tampoi-kalibre batekin egiaztatu behar da. ISO 286 tauletatik abiatuta, kalkulatu kalibrearen \"pasa\" eta \"ez pasa\" aldeen neurriak.",
+   "es": "Hay que verificar el agujero Ø18G7 con un calibre tampón. A partir de las tablas ISO 286, calcula las medidas de los lados \"pasa\" y \"no pasa\" del calibre."
+  },
+  "status": "review-needed"
+ },
+ {
+  "id": "error-1-1",
+  "origin": "generated",
+  "template": "error",
+  "seed": 1,
+  "difficulty": 1,
+  "setup": {
+   "kind": "error",
+   "measured": [
+    "74.996",
+    "74.996",
+    "74.993",
+    "74.995"
+   ],
+   "trueValue": "75"
+  },
+  "asks": [
+   {
+    "id": "Ea",
+    "kind": "errorAbs"
+   },
+   {
+    "id": "Er",
+    "kind": "errorRel"
+   }
+  ],
+  "weights": {
+   "Ea": 1,
+   "Er": 1
+  },
+  "text": {
+   "eu": "75 mm-ko galga-bloke kalibratu bat (egiazko baliotzat hartzen da) mikrometro batekin 4 aldiz neurtu da: 74,996; 74,996; 74,993; 74,995 mm. Kalkulatu batez besteko neurketaren errore absolutua (E = x̄ − x_egiazkoa) eta errore erlatiboa (%).",
+   "es": "Un bloque patrón calibrado de 75 mm (se toma como valor verdadero) se ha medido 4 veces con un micrómetro: 74,996; 74,996; 74,993; 74,995 mm. Calcula el error absoluto de la media (E = x̄ − x_verdadero) y el error relativo (%)."
+  },
+  "status": "review-needed"
+ }
+]

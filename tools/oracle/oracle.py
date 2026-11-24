@@ -144,6 +144,11 @@ def main(out_path: str, golden_path: str) -> None:
 
     out.update(build(g))
 
+    # Phase 4: the whole pool, ask by ask.
+    from pool_oracle import run as run_pool  # noqa: E402
+
+    out["pool"] = run_pool(solvers, sets)
+
     Path(out_path).parent.mkdir(parents=True, exist_ok=True)
     Path(out_path).write_text(json.dumps(out, indent=1), encoding="utf-8")
     print("oracle: " + ", ".join(f"{len(v)} {k}" for k, v in out.items()) + f" -> {out_path}")

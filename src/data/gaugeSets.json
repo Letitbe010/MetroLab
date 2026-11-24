@@ -4,28 +4,117 @@
     {
       "id": "87",
       "count": 87,
-      "name": { "eu": "87 blokeko multzoa (1 mm-ko oinarria)", "es": "Juego de 87 bloques (base 1 mm)" },
+      "name": {
+        "eu": "87 blokeko multzoa (1 mm-ko oinarria)",
+        "es": "Juego de 87 bloques (base 1 mm)"
+      },
       "source": "Mitutoyo 516-535-56 (rectangular steel, 1 mm base, 87 pc), composition as listed by Penn Tool Co.; same composition as the MetroLab spec §3. Note: some vendors sell a different 87-piece set (e.g. 1.01-1.50 and 2-10 mm); MetroLab always shows the set used.",
       "sourceUrl": "https://penntoolco.com/mitutoyo-1mm-base-block-set-rectangular-steel-87-pc-grade-k-series-516-516-535-56",
       "series": [
-        { "from": "1.001", "to": "1.009", "step": "0.001" },
-        { "from": "1.01", "to": "1.49", "step": "0.01" },
-        { "from": "0.5", "to": "9.5", "step": "0.5" },
-        { "from": "10", "to": "100", "step": "10" }
+        {
+          "from": "1.001",
+          "to": "1.009",
+          "step": "0.001"
+        },
+        {
+          "from": "1.01",
+          "to": "1.49",
+          "step": "0.01"
+        },
+        {
+          "from": "0.5",
+          "to": "9.5",
+          "step": "0.5"
+        },
+        {
+          "from": "10",
+          "to": "100",
+          "step": "10"
+        }
       ]
     },
     {
       "id": "112",
       "count": 112,
-      "name": { "eu": "112 blokeko multzoa", "es": "Juego de 112 bloques" },
+      "name": {
+        "eu": "112 blokeko multzoa",
+        "es": "Juego de 112 bloques"
+      },
       "source": "Mitutoyo 516-437-26 (square steel, metric, 112 pc), composition as listed by Transcat.",
       "sourceUrl": "https://www.transcat.com/516-437-26-223816",
       "series": [
-        { "from": "1.0005", "to": "1.0005", "step": "0.0005" },
-        { "from": "1.001", "to": "1.009", "step": "0.001" },
-        { "from": "1.01", "to": "1.49", "step": "0.01" },
-        { "from": "0.5", "to": "24.5", "step": "0.5" },
-        { "from": "25", "to": "100", "step": "25" }
+        {
+          "from": "1.0005",
+          "to": "1.0005",
+          "step": "0.0005"
+        },
+        {
+          "from": "1.001",
+          "to": "1.009",
+          "step": "0.001"
+        },
+        {
+          "from": "1.01",
+          "to": "1.49",
+          "step": "0.01"
+        },
+        {
+          "from": "0.5",
+          "to": "24.5",
+          "step": "0.5"
+        },
+        {
+          "from": "25",
+          "to": "100",
+          "step": "25"
+        }
+      ]
+    },
+    {
+      "id": "madrid2023",
+      "count": 32,
+      "name": {
+        "eu": "Madril 2023ko azterketako multzoa (32 bloke)",
+        "es": "Juego del examen de Madrid 2023 (32 bloques)"
+      },
+      "source": "Madrid OPE 2023 (reposición), 0590-112, exercise 2.6: set printed in the statement (1.005; 1.01-1.09; 1.10-1.90; 1-10; 20, 30, 60). Interpreted as steps 0.01, 0.1 and 1.",
+      "sourceUrl": "https://www.comunidad.madrid/docs/assets/2023/06/26/rh03_257_2023_exam_r_590112.pdf",
+      "series": [
+        {
+          "from": "1.005",
+          "to": "1.005",
+          "step": "0.005"
+        },
+        {
+          "from": "1.01",
+          "to": "1.09",
+          "step": "0.01"
+        },
+        {
+          "from": "1.1",
+          "to": "1.9",
+          "step": "0.1"
+        },
+        {
+          "from": "1",
+          "to": "10",
+          "step": "1"
+        },
+        {
+          "from": "20",
+          "to": "20",
+          "step": "10"
+        },
+        {
+          "from": "30",
+          "to": "30",
+          "step": "10"
+        },
+        {
+          "from": "60",
+          "to": "60",
+          "step": "10"
+        }
       ]
     }
   ]

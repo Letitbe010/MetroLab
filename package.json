@@ -1,7 +1,7 @@
 {
   "name": "metrolab",
   "private": true,
-  "version": "0.3.0",
+  "version": "0.4.0",
   "type": "module",
   "description": "MetroLab: dimensional metrology exercise trainer (instrument readings, gauge blocks, sine bar, tapers, three-wire method, rollers, temperature, limit gauges) for the Basque OPE 1508 (Fabrikazio Mekanikoaren Antolamendua eta Proiektuak)",
   "license": "MIT",
@@ -17,7 +17,8 @@
     "oracle:py": "python tools/oracle/oracle.py tools/oracle/out/oracle.json tests/golden/golden.json",
     "icons": "node tools/make-icons.mjs",
     "usability": "node tools/usability.mjs http://localhost:4193/MetroLab/",
-    "a11y": "node tools/a11y.mjs http://localhost:4193/MetroLab/"
+    "a11y": "node tools/a11y.mjs http://localhost:4193/MetroLab/",
+    "pin": "vite-node tools/pin-generated.ts"
   },
   "dependencies": {
     "@types/katex": "^0.16.7",
