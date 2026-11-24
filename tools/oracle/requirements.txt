@@ -1,1 +1,2 @@
-sympy==1.14.0
+# Phase 1 oracle uses only the standard library (fractions).
+# sympy is added (pinned and tested) in phase 2 for the geometry.

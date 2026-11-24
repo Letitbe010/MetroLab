@@ -56,7 +56,7 @@ describe('solvers A (classic) and B (exact DP)', () => {
     expect(minStack(parse('560'), S87)).not.toBeNull();
   });
 
-  it('property: for any sum of distinct blocks, A (if found) and B are valid and B ≤ A ≤ subset size (2 000 cases)', () => {
+  it('property: for any sum of distinct blocks, A (if found) and B are valid and B ≤ A and B ≤ subset size (2 000 cases)', () => {
     for (const set of [S87, S112]) {
       fc.assert(
         fc.property(fc.uniqueArray(fc.integer({ min: 0, max: set.blocks.length - 1 }), { minLength: 1, maxLength: 5 }), (idx) => {
