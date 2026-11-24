@@ -1,0 +1,11 @@
+node_modules/
+dist/
+coverage/
+*.log
+.env
+.env.*
+tools/oracle/.venv/
+tools/oracle/__pycache__/
+tools/oracle/out/
+.DS_Store
+screenshots/

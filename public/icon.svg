@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="96" fill="#0f1b2d"/>
+  <!-- taper on a surface plate, measured over two rollers (the app's core schema) -->
+  <line x1="72" y1="420" x2="440" y2="420" stroke="#9aa7b8" stroke-width="12" stroke-linecap="round"/>
+  <polygon points="196,410 316,410 296,132 216,132" fill="#c9d3df"/>
+  <rect x="104" y="350" width="60" height="60" rx="6" fill="#ffc266"/>
+  <rect x="348" y="350" width="60" height="60" rx="6" fill="#ffc266"/>
+  <circle cx="174" cy="318" r="32" fill="#7fb0ff"/>
+  <circle cx="338" cy="318" r="32" fill="#7fb0ff"/>
+  <line x1="142" y1="250" x2="370" y2="250" stroke="#ffab4d" stroke-width="10" stroke-dasharray="24 14" stroke-linecap="round"/>
+  <line x1="142" y1="226" x2="142" y2="274" stroke="#ffab4d" stroke-width="10" stroke-linecap="round"/>
+  <line x1="370" y1="226" x2="370" y2="274" stroke="#ffab4d" stroke-width="10" stroke-linecap="round"/>
+</svg>
