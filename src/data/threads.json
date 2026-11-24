@@ -1,0 +1,18 @@
+{
+  "_note": "ISO metric coarse threads, alpha = 60 deg. d and P from ISO 261/262; d2 = basic pitch diameter from ISO 724 (d2 = d - 0.649519 P, tabulated to 3 decimals). Values typed from the ISO 724 table; tests/data.test.ts checks them against the formula.",
+  "source": "ISO 724:1993 (basic dimensions) and ISO 261:1998 (coarse pitches); cf. https://en.wikipedia.org/wiki/ISO_metric_screw_thread",
+  "threads": [
+    { "name": "M3", "d": "3", "P": "0.5", "d2": "2.675" },
+    { "name": "M4", "d": "4", "P": "0.7", "d2": "3.545" },
+    { "name": "M5", "d": "5", "P": "0.8", "d2": "4.480" },
+    { "name": "M6", "d": "6", "P": "1", "d2": "5.350" },
+    { "name": "M8", "d": "8", "P": "1.25", "d2": "7.188" },
+    { "name": "M10", "d": "10", "P": "1.5", "d2": "9.026" },
+    { "name": "M12", "d": "12", "P": "1.75", "d2": "10.863" },
+    { "name": "M16", "d": "16", "P": "2", "d2": "14.701" },
+    { "name": "M20", "d": "20", "P": "2.5", "d2": "18.376" },
+    { "name": "M24", "d": "24", "P": "3", "d2": "22.051" },
+    { "name": "M30", "d": "30", "P": "3.5", "d2": "27.727" },
+    { "name": "M36", "d": "36", "P": "4", "d2": "33.402" }
+  ]
+}

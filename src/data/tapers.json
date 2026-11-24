@@ -1,0 +1,19 @@
+{
+  "_note": "Tapers as C = 1:x (C = (D - d)/L). Morse ratios are not round numbers. Checked 2026-11-24.",
+  "source": "ISO/R 1119:1969 'Series of conical tapers and taper angles' (table of cones for general applications, incl. Morse 0-6); 7:24 steep taper per ISO 297 / DIN 2080 (SK).",
+  "sourceUrl": "https://cdn.standards.iteh.ai/samples/393/59b5e966c1344a30b4189b766d61e88e/ISO-R-1119-1969.pdf",
+  "tapers": [
+    { "id": "1:50", "name": "1:50", "num": "1", "den": "50" },
+    { "id": "1:20", "name": "1:20 (metrikoa / métrico)", "num": "1", "den": "20" },
+    { "id": "1:10", "name": "1:10", "num": "1", "den": "10" },
+    { "id": "1:5", "name": "1:5", "num": "1", "den": "5" },
+    { "id": "7:24", "name": "7:24 (SK / ISO)", "num": "7", "den": "24" },
+    { "id": "MT0", "name": "Morse 0", "num": "1", "den": "19.212" },
+    { "id": "MT1", "name": "Morse 1", "num": "1", "den": "20.047" },
+    { "id": "MT2", "name": "Morse 2", "num": "1", "den": "20.020" },
+    { "id": "MT3", "name": "Morse 3", "num": "1", "den": "19.922" },
+    { "id": "MT4", "name": "Morse 4", "num": "1", "den": "19.254" },
+    { "id": "MT5", "name": "Morse 5", "num": "1", "den": "19.002" },
+    { "id": "MT6", "name": "Morse 6", "num": "1", "den": "19.180" }
+  ]
+}

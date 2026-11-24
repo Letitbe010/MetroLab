@@ -3,7 +3,8 @@
 Independent re-implementation with exact fractions:
   * instrument readings (vernier caliper, micrometer) from the golden cases and seeded random cases;
   * minimum gauge-block stacks by meet-in-the-middle over block combinations (not DP),
-    for the golden stack and seeded random targets.
+    for the golden stack and seeded random targets;
+  * phase 2 (geometry_oracle.py, sympy): sine bar, tapers, three wires, temperature, limit gauges.
 
 Usage:
     python tools/oracle/oracle.py <out.json> tests/golden/golden.json
@@ -137,9 +138,15 @@ def main(out_path: str, golden_path: str) -> None:
         out["stacks"].append({"id": tid, "set": sid, "target": fstr(t), "min": k,
                               "stack": [fstr(b) for b in stack] if stack else None})
 
+    # Phase 2: geometry and the other solvers (sympy).
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from geometry_oracle import build  # noqa: E402
+
+    out.update(build(g))
+
     Path(out_path).parent.mkdir(parents=True, exist_ok=True)
     Path(out_path).write_text(json.dumps(out, indent=1), encoding="utf-8")
-    print(f"oracle: {len(out['readings'])} readings, {len(out['stacks'])} stacks -> {out_path}")
+    print("oracle: " + ", ".join(f"{len(v)} {k}" for k, v in out.items()) + f" -> {out_path}")
 
 
 if __name__ == "__main__":
