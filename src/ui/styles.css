@@ -407,3 +407,23 @@ ol.path li::before { content: counter(step); display: inline-flex; align-items: 
 .in-cap { font-size: 11px; fill: #445; font-style: italic; }
 .in-ref { stroke: #111; stroke-width: 1.2; }
 .in-hitline { stroke: var(--sx-calc); stroke-width: 1; stroke-dasharray: 3 3; }
+
+/* ---------- practice ---------- */
+.exercise .statement { margin-top: 4px; }
+.source { font-size: 14px; color: var(--muted); }
+.datalist { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 4px 14px; margin: 10px 0; font-size: 14.5px; }
+.datalist div { display: flex; justify-content: space-between; gap: 8px; border-bottom: 1px dotted var(--line); padding: 2px 0; min-width: 0; }
+.datalist dt { color: var(--muted); }
+.datalist dd { margin: 0; font-weight: 600; }
+.ask-list { margin: 0 0 6px; padding-left: 0; list-style: none; }
+fieldset.ask { margin: 0; min-width: 0; }
+.ask-head { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; font-weight: 600; padding: 0 4px; width: 100%; }
+.ask-head .chip { margin-left: auto; }
+.ask.partial { border-color: var(--warn); }
+.chip.partial { color: var(--warn); background: var(--warnbg); border-color: var(--warn); }
+.stack-in { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 8px; }
+.block-in { display: inline-flex; align-items: center; gap: 4px; }
+.block-in input { font: inherit; font-size: 17px; width: 5.5em; padding: 8px; border: 1px solid var(--muted); border-radius: 8px; min-height: 44px; background: var(--surface); color: var(--ink); }
+.formula.result { font-weight: 700; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.muted { color: var(--muted); }

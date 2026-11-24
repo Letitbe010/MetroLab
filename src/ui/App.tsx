@@ -1,11 +1,14 @@
 import { useEffect, useState } from 'react';
 import { type Lang, LangContext, translate } from '../i18n';
-import { loadLang, saveLang } from './store';
+import { PracticeExercise } from './PracticeExercise';
+import { PracticeHome } from './PracticeHome';
+import { type Route, useRoute } from './router';
 import { SchemaGallery } from './SchemaGallery';
+import { loadLang, saveLang } from './store';
 
 type Section = 'home' | 'teoria' | 'ebatziak' | 'praktika' | 'aurrerapena' | 'eskemak';
 
-const NAV: { key: string; section: Exclude<Section, 'home'>; icon: string }[] = [
+const NAV: { key: string; section: Exclude<Section, 'home' | 'eskemak'>; icon: string }[] = [
   { key: 'nav.theory', section: 'teoria', icon: 'T' },
   { key: 'nav.worked', section: 'ebatziak', icon: 'E' },
   { key: 'nav.practice', section: 'praktika', icon: 'P' },
@@ -15,28 +18,15 @@ const NAV: { key: string; section: Exclude<Section, 'home'>; icon: string }[] = 
 const TOPICS = ['reading', 'gauges', 'angles', 'tapers', 'threads', 'rollers', 'temperature', 'limits'] as const;
 const STEPS = ['theory', 'worked', 'practice', 'exam'] as const;
 
-function parseHash(): Section {
-  const s = window.location.hash.replace(/^#\/?/, '').split('/')[0] ?? '';
-  if (s === 'eskemak') return 'eskemak'; // phase 3 review screen (not in the navigation)
-  return (NAV.find((n) => n.section === s)?.section ?? 'home') as Section;
-}
-
-function useSection(): Section {
-  const [s, setS] = useState<Section>(parseHash);
-  useEffect(() => {
-    const on = () => setS(parseHash());
-    window.addEventListener('hashchange', on);
-    return () => window.removeEventListener('hashchange', on);
-  }, []);
-  return s;
-}
+const sectionOf = (r: Route): Section => (r.name === 'start' ? 'home' : r.name === 'soon' ? r.section : r.name === 'schemas' ? 'eskemak' : 'praktika');
 
 const COMMIT = (import.meta.env.VITE_COMMIT as string | undefined)?.slice(0, 7) ?? 'dev';
-const VERSION = 'v0.4.0';
+const VERSION = 'v0.5.0';
 
 export function App() {
   const [lang, setLang] = useState<Lang>(loadLang);
-  const section = useSection();
+  const route = useRoute();
+  const section = sectionOf(route);
   const t = (k: string, v?: Record<string, string | number>) => translate(lang, k, v);
   useEffect(() => {
     document.documentElement.lang = lang;
@@ -54,6 +44,53 @@ export function App() {
       </a>
     );
   };
+
+  let page;
+  switch (route.name) {
+    case 'schemas':
+      page = <SchemaGallery lang={lang} />;
+      break;
+    case 'practice':
+      page = <PracticeHome />;
+      break;
+    case 'generated':
+      page = <PracticeExercise key={`${route.template}/${route.level}/${route.seed}`} source={{ kind: 'generated', template: route.template, level: route.level, seed: route.seed }} />;
+      break;
+    case 'pool':
+      page = <PracticeExercise key={route.id} source={{ kind: 'pool', id: route.id }} />;
+      break;
+    case 'soon':
+      page = (
+        <section className="card">
+          <h1>{t(NAV.find((n) => n.section === route.section)!.key)}</h1>
+          <p className="note">{t('nav.soon')}</p>
+        </section>
+      );
+      break;
+    default:
+      page = (
+        <section className="card">
+          <h1>{t('home.title')}</h1>
+          <p className="lead">{t('home.lead')}</p>
+          <h2 className="sec">{t('home.path')}</h2>
+          <ol className="path">
+            {STEPS.map((s) => (
+              <li key={s}>{t(`home.step.${s}`)}</li>
+            ))}
+          </ol>
+          <h2 className="sec">{t('home.topics')}</h2>
+          <div className="topics">
+            {TOPICS.map((k) => (
+              <div key={k} className="topic">
+                <h3>{t(`topic.${k}`)}</h3>
+                <p>{t(`topic.${k}.d`)}</p>
+              </div>
+            ))}
+          </div>
+          <p className="note warn">{t('status.wip')}</p>
+        </section>
+      );
+  }
 
   return (
     <LangContext.Provider value={lang}>
@@ -85,37 +122,7 @@ export function App() {
               ))}
             </div>
           </header>
-          <main>
-            {section === 'eskemak' ? (
-              <SchemaGallery lang={lang} />
-            ) : section === 'home' ? (
-              <section className="card">
-                <h1>{t('home.title')}</h1>
-                <p className="lead">{t('home.lead')}</p>
-                <h2 className="sec">{t('home.path')}</h2>
-                <ol className="path">
-                  {STEPS.map((s) => (
-                    <li key={s}>{t(`home.step.${s}`)}</li>
-                  ))}
-                </ol>
-                <h2 className="sec">{t('home.topics')}</h2>
-                <div className="topics">
-                  {TOPICS.map((k) => (
-                    <div key={k} className="topic">
-                      <h3>{t(`topic.${k}`)}</h3>
-                      <p>{t(`topic.${k}.d`)}</p>
-                    </div>
-                  ))}
-                </div>
-                <p className="note warn">{t('status.wip')}</p>
-              </section>
-            ) : (
-              <section className="card">
-                <h1>{t(NAV.find((n) => n.section === section)!.key)}</h1>
-                <p className="note">{t('nav.soon')}</p>
-              </section>
-            )}
-          </main>
+          <main>{page}</main>
         </div>
         <nav className="bottom" aria-label={t('nav.home')}>
           {NAV.map((n) => (
