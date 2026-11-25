@@ -1,7 +1,7 @@
 {
   "name": "metrolab",
   "private": true,
-  "version": "0.5.0",
+  "version": "0.6.0",
   "type": "module",
   "description": "MetroLab: dimensional metrology exercise trainer (instrument readings, gauge blocks, sine bar, tapers, three-wire method, rollers, temperature, limit gauges) for the Basque OPE 1508 (Fabrikazio Mekanikoaren Antolamendua eta Proiektuak)",
   "license": "MIT",

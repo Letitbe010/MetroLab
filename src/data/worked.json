@@ -1,0 +1,13 @@
+[
+  { "id": "w01-vernier", "base": "spec-mg5", "topic": "instruments", "now": { "template": "vernier", "level": 1 }, "status": "draft" },
+  { "id": "w02-micrometer", "base": "spec-mg6", "topic": "instruments", "now": { "template": "micrometer", "level": 1 }, "status": "draft" },
+  { "id": "w03-stack", "base": "gaugeStack-2-1", "topic": "gaugeBlocks", "now": { "template": "gaugeStack", "level": 2 }, "status": "draft" },
+  { "id": "w04-sinebar", "base": "ope-madrid-2023-2-6", "topic": "sineBar", "now": { "template": "sineBar", "level": 2 }, "status": "draft" },
+  { "id": "w05-taper-rollers", "base": "ope-euskadi-2020-2", "topic": "tapers", "now": { "template": "taperRollers", "level": 2 }, "status": "draft" },
+  { "id": "w06-taper-balls", "base": "taperBalls-3-1", "topic": "tapers", "now": { "template": "taperBalls", "level": 3 }, "status": "draft" },
+  { "id": "w07-three-wire", "base": "spec-mg2", "topic": "threads", "now": { "template": "threeWire", "level": 2 }, "status": "draft" },
+  { "id": "w08-dovetail", "base": "dovetail-3-1", "topic": "profiles", "now": { "template": "dovetail", "level": 3 }, "status": "draft" },
+  { "id": "w09-temperature", "base": "temperature-2-1", "topic": "temperature", "now": { "template": "temperature", "level": 2 }, "status": "draft" },
+  { "id": "w10-gauges", "base": "adapted-andalucia-2023-4-2", "topic": "limitGauges", "now": { "template": "fixedGauge", "level": 2 }, "status": "draft" },
+  { "id": "w11-spline", "base": "ope-madrid-2025-4", "topic": "profiles", "now": { "template": "spline", "level": 3 }, "status": "draft" }
+]

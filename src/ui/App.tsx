@@ -5,6 +5,7 @@ import { PracticeHome } from './PracticeHome';
 import { type Route, useRoute } from './router';
 import { SchemaGallery } from './SchemaGallery';
 import { loadLang, saveLang } from './store';
+import { WorkedList, WorkedView } from './WorkedView';
 
 type Section = 'home' | 'teoria' | 'ebatziak' | 'praktika' | 'aurrerapena' | 'eskemak';
 
@@ -18,10 +19,11 @@ const NAV: { key: string; section: Exclude<Section, 'home' | 'eskemak'>; icon: s
 const TOPICS = ['reading', 'gauges', 'angles', 'tapers', 'threads', 'rollers', 'temperature', 'limits'] as const;
 const STEPS = ['theory', 'worked', 'practice', 'exam'] as const;
 
-const sectionOf = (r: Route): Section => (r.name === 'start' ? 'home' : r.name === 'soon' ? r.section : r.name === 'schemas' ? 'eskemak' : 'praktika');
+const sectionOf = (r: Route): Section =>
+  r.name === 'start' ? 'home' : r.name === 'soon' ? r.section : r.name === 'schemas' ? 'eskemak' : r.name === 'workedList' || r.name === 'worked' ? 'ebatziak' : 'praktika';
 
 const COMMIT = (import.meta.env.VITE_COMMIT as string | undefined)?.slice(0, 7) ?? 'dev';
-const VERSION = 'v0.5.0';
+const VERSION = 'v0.6.0';
 
 export function App() {
   const [lang, setLang] = useState<Lang>(loadLang);
@@ -52,6 +54,12 @@ export function App() {
       break;
     case 'practice':
       page = <PracticeHome />;
+      break;
+    case 'workedList':
+      page = <WorkedList />;
+      break;
+    case 'worked':
+      page = <WorkedView key={route.id} id={route.id} />;
       break;
     case 'generated':
       page = <PracticeExercise key={`${route.template}/${route.level}/${route.seed}`} source={{ kind: 'generated', template: route.template, level: route.level, seed: route.seed }} />;

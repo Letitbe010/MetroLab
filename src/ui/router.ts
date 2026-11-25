@@ -4,7 +4,8 @@
  *   #/praktika                               → practice home
  *   #/praktika/<template>/<level>/seed/<n>   → generated exercise
  *   #/praktika/pool/<id>                     → pool exercise
- *   #/teoria, #/ebatziak, #/aurrerapena      → later phases
+ *   #/ebatziak, #/ebatziak/<id>               → worked exercises
+ *   #/teoria, #/aurrerapena                  → later phases
  *   #/eskemak                                → schema review gallery (phase 3)
  */
 import { useEffect, useState } from 'react';
@@ -14,7 +15,9 @@ export type Route =
   | { name: 'practice' }
   | { name: 'generated'; template: string; level: number; seed: number }
   | { name: 'pool'; id: string }
-  | { name: 'soon'; section: 'teoria' | 'ebatziak' | 'aurrerapena' }
+  | { name: 'workedList' }
+  | { name: 'worked'; id: string }
+  | { name: 'soon'; section: 'teoria' | 'aurrerapena' }
   | { name: 'schemas' };
 
 export function parseHash(hash: string): Route {
@@ -25,7 +28,8 @@ export function parseHash(hash: string): Route {
       return { name: 'generated', template: p[1], level: Number(p[2]), seed: Number(p[4]) };
     return { name: 'practice' };
   }
-  if (p[0] === 'teoria' || p[0] === 'ebatziak' || p[0] === 'aurrerapena') return { name: 'soon', section: p[0] };
+  if (p[0] === 'ebatziak') return p[1] ? { name: 'worked', id: p[1] } : { name: 'workedList' };
+  if (p[0] === 'teoria' || p[0] === 'aurrerapena') return { name: 'soon', section: p[0] };
   if (p[0] === 'eskemak') return { name: 'schemas' };
   return { name: 'start' };
 }
@@ -38,6 +42,10 @@ export function hrefOf(r: Route): string {
       return `#/praktika/pool/${encodeURIComponent(r.id)}`;
     case 'practice':
       return '#/praktika';
+    case 'workedList':
+      return '#/ebatziak';
+    case 'worked':
+      return `#/ebatziak/${encodeURIComponent(r.id)}`;
     case 'soon':
       return `#/${r.section}`;
     case 'schemas':
